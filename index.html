@@ -1,0 +1,492 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="./dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="./src/input.css">
+</head>
+<body>
+    <!-- navbar code start here -->
+    <header>
+        <nav class="bg-white shadow-lg sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                  <a href="index.html" class="text-xl font-bold text-gray-800">Your Logo</a>
+                </div>
+                <div class="md:hidden">
+                  <button id="mobile-open-button" class="text-3xl sm:hidden focus:outline-none">
+                    &#9776;
+                  </button>
+                </div>
+                <div class="hidden md:flex items-center justify-end space-x-4 lg:space-x-8" id="desktop-nav">
+                  <ul class="flex items-center justify-end space-x-8">
+                    <li>
+                      <a href="howWorks.html" class="text-gray-600 hover:text-gray-900 font-semibold hover:border-b-2 border-gray-900 pb-1">How IT Works</a>
+                    </li>
+
+                    <li>
+                      <a href="#" class="text-gray-600 hover:text-gray-900 font-semibold hover:border-b-2 border-gray-900 pb-1" onclick="toggleDropdownchosethree(event)">Services <i id="chevronfourIcon" class="fas fa-chevron-down"></i></a>
+                      <ul id="servicesdropdownContent" class="absolute hidden bg-white border border-gray-300 py-2 mt-2 rounded-lg w-56">
+                            <li>
+                                <a href="formallc.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                    Form an LLC
+                                </a>
+                                <a href="form-c-corporation.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                    Form a C Corporation
+                                </a>
+                                <a href="form-s-corporation.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                    Form a S Corporation
+                                </a>
+                                <a href="form-non-profit.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                    Form a Non Profit
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                      <a href="#" class="text-gray-600 hover:text-gray-900 font-semibold hover:border-b-2 border-gray-900 pb-1" onclick="toggleDropdownchosetwo(event)">Attorney <i id="chevronthreeIcon" class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul id="attorneydropdownContent" class="absolute hidden bg-white border border-gray-300 py-2 mt-2 rounded-lg w-56">
+                            <li>
+                                <a href="whyChooseUs.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                    Business Attorney
+                                </a>
+                                <a href="testimonial.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                    Personal Attorney
+                                </a>
+                                <a href="contactUs.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                    State Plans
+                                </a>
+                                <a href="contactUs.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                    Trademarks Registration
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                      <a href="#" class="text-gray-600 hover:text-gray-900 font-semibold hover:border-b-2 border-gray-900 pb-1" onclick="toggleDropdownchose(event)">About Us
+                        <i id="chevrontwoIcon" class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul id="aboutdropdownContent" class="absolute hidden bg-white border border-gray-300 py-2 mt-2 rounded-lg w-56">
+                            <li>
+                                <a href="whyChooseUs.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                    Why Choose Us
+                                </a>
+                                <a href="testimonial.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                    Testimonial
+                                </a>
+                                <a href="contactUs.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="relative">
+                        <a href="#" class="flex items-center border-2 border-gray-600 px-4 py-3 rounded-full text-black hover:text-gray-900" onclick="toggleDropdown(event)">
+                          <i class="fas fa-phone mr-2"></i>
+                          <i id="chevronIcon" class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul id="dropdownContent" class="absolute hidden bg-white border border-gray-300 py-2 mt-2 rounded-lg w-56">
+                            <li>
+                                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                    <p class="font-bold">
+                                        Talk to LegalZoom:<br/>
+                                        +1 (737) 309-5733
+                                    </p><br/>
+                                    <p class="font-bold">Customer Care hours</p> <br />
+                                    Mon–Fri 5 a.m.–7 p.m. PT <br />
+                                    Weekends 7 a.m.–4 p.m. PT
+                                </a>
+                            </li>
+        
+                        </ul>
+                    </li>
+            
+                    <li>
+                        <a href="#" class="border-2 border-gray-600 px-4 py-3 rounded-full  text-black hover:text-gray-900">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="signIn.html" class="bg-black text-white px-8 py-2 rounded-full">
+                            Sign In
+                        </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="md:hidden" id="mobile-nav" style="display: none;">
+                <ul class="flex flex-col items-start mt-2 space-y-2">
+                  <li>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 font-semibold hover:border-b-2 border-gray-900 pb-1">How IT Works</a>
+                  </li>
+
+                  <li>
+                      <a href="#" class="text-gray-600 hover:text-gray-900 font-semibold hover:border-b-2 border-gray-900 pb-1" onclick="toggleDropdownchosethree(event)">Services <i id="chevronfourIcon" class="fas fa-chevron-down"></i></a>
+                      <ul id="servicesdropdownContent" class="absolute hidden bg-white border border-gray-300 py-2 mt-2 rounded-lg w-56">
+                            <li>
+                                <a href="formallc.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                    Form an LLC
+                                </a>
+                                <a href="form-c-corporation.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                    Form C Corporation
+                                </a>
+                                <a href="form-s-corporation.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                    Form S Corporation
+                                </a>
+                                <a href="form-non-profit.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                    From a Non Profit
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                  <li>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 font-semibold hover:border-b-2 border-gray-900 pb-1" onclick="toggleDropdownchosetwo(event)">Attorney <i id="chevronthreeIcon" class="fas fa-chevron-down"></i>
+                      </a>
+                      <ul id="attorneydropdownContent" class="absolute hidden bg-white border border-gray-300 py-2 mt-2 rounded-lg w-56">
+                          <li>
+                              <a href="whyChooseUs.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                  Business Attorney
+                              </a>
+                              <a href="testimonial.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                  Personal Attorney
+                              </a>
+                              <a href="contactUs.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                  State Plans
+                              </a>
+                              <a href="contactUs.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                  Trademarks Registration
+                              </a>
+                          </li>
+                      </ul>
+                  </li>
+
+                  <li>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 font-semibold hover:border-b-2 border-gray-900 pb-1">Resource Center</a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 font-semibold hover:border-b-2 border-gray-900 pb-1" onclick="toggleDropdownchose(event)">About Us
+                      <i id="chevrontwoIcon" class="fas fa-chevron-down"></i>
+                      </a>
+                      <ul id="aboutdropdownContent" class="absolute hidden bg-white border border-gray-300 py-2 mt-2 rounded-lg w-56">
+                          <li>
+                              <a href="whyChooseUs.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                  Why Choose Us
+                              </a>
+                              <a href="testimonial.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                  Testimonial
+                              </a>
+                              <a href="contactUs.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                  Contact Us
+                              </a>
+                          </li>
+                      </ul>
+                  </li>
+
+                  <li class="relative">
+                    <a href="#" class="flex items-center mb-3 border-2 border-gray-600 px-4 py-3 rounded-full text-black hover:text-gray-900 md:text-lg lg:text-xl" onclick="toggleDropdown(event) ">
+                      <i class="fas fa-phone mr-2"></i>
+                      <i id="chevronIcon" class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul id="dropdownContent" class="absolute hidden bg-white border border-gray-300 py-2 mt-2 rounded-lg w-56">
+                        <li>
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                                <p class="font-bold">
+                                    Talk to LegalZoom:<br/>
+                                    +1 (737) 309-5733
+                                </p><br/>
+                                <p class="font-bold">Customer Care hours</p> <br />
+                                Mon–Fri 5 a.m.–7 p.m. PT <br />
+                                Weekends 7 a.m.–4 p.m. PT
+                            </a>
+                        </li>
+    
+                    </ul>
+                    </li>
+    
+                    <li>
+                        <a href="signIn.html" class="bg-black text-white mb-3 px-8 py-2 rounded-full">
+                            Sign In
+                        </a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </header>
+    <!-- navbar code end here -->
+
+    <!-- hero section code start here -->
+    <section class="hero py-16 mt-58">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="hero-section grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
+                <div class="text-left">
+                    <h1 class="text-4xl sm:text-6xl font-bold">U.S. Legal Help in Pakistan</h1>
+                    <p class="text-lg mt-4" style="line-height: 32px; font-size: 24px;
+                    letter-spacing: -.48px;">Get the legal help you need, with our DIY services or attorney advice. Either way, we've got your back.</p>
+
+                    <div class="mt-8 flex flex-col space-y-4">
+                        <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-4 rounded-full text-center my-4 block">Business formation</a>
+                        <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-4 rounded-full text-center my-4 block">Wills and trusts</a>
+                        <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-4 rounded-full text-center my-4 block">Intellectual property</a>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="./public/img/hero-top-v1.jpg" alt="Image" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- hero section code end here -->
+
+
+    <!-- attorney section start here -->
+    <section class="attorney py-10 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="attorney-section grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
+                <div class="text-left">
+                    <h1 class="text-4xl sm:text-4xl font-bold">Attorneys with you, every step of the way</h1>
+                    <p class="text-lg mt-4" style="line-height: 32px; font-size: 20px;
+                    letter-spacing: -.48px;">Starting with our DIY services doesn’t mean you have to do it all by yourself. Count on our vetted network of attorneys for guidance—no hourly charges, no office visits.</p>
+                </div>
+
+                <div>
+                    <img src="./img/Entrepreneur-Man-on-the-Couch.jpg" alt="Image" class="w-full h-auto rounded-lg">
+                </div>
+            </div>
+            <div class="mt-8 space-y-4 flex flex-col sm:flex-row grid-cols-1">
+                <a href="#" class="bg-black hover:bg-white hover:text-black text-white font-bold border-4 border-solid border-gray-400 py-4 px-4 rounded-full text-center">Get Legal help</a>
+                <a href="#" class=" text-gray-300 font-bold py-4 px-4 rounded-full text-center border-b-2 border-gray-900 pb-1 ">Legal Plan</a>
+                <a href="#" class=" text-gray-300 font-bold py-4 px-4 rounded-full text-center border-b-2 border-gray-900 pb-1">Schedule a Call</a>
+                <a href="#" class=" text-gray-300 font-bold py-4 px-4 rounded-full text-center border-b-2 border-gray-900 pb-1">Attorney directory</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- attorney section end here -->
+
+
+    <!-- claims wrapper section -->
+    <section class="claims-wrapper bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-40">
+            <div class="attorney-section grid grid-cols-1 sm:grid-cols-3 gap-8 items-center">
+                <div class="left-section">
+                    <h1 class="text-bold font-bold" style="line-height: 56px; font-size: 48px;">2 million+</h1>
+                    <h3 class="font-semibold my-3" style="line-height: 32px; font-size: 24px; letter-spacing: -.48px;">businesses</h3>
+                    <p style="line-height: 28px; letter-spacing: -.2px; font-size: 18px;">Helping entrepreneurs turn ideas into businesses over 2 million times.</p>
+                </div>
+                <div class="middle-section">
+                    <h1 class="text-bold font-bold" style="line-height: 56px; font-size: 48px;">3.5 million+</h1>
+                    <h3 class="font-semibold my-3" style="line-height: 32px; font-size: 24px; letter-spacing: -.48px;">estate planning docs</h3>
+                    <p style="line-height: 28px; letter-spacing: -.2px; font-size: 18px;">Protecting loved ones by helping customers create 3.5 million+ estate planning documents.</p>
+                </div>
+                <div class="last-section">
+                    <h1 class="text-bold font-bold" style="line-height: 56px; font-size: 48px;">650,000+</h1>
+                    <h3 class="font-semibold my-3" style="line-height: 32px; font-size: 24px; letter-spacing: -.48px;">consultations</h3>
+                    <p style="line-height: 28px; letter-spacing: -.2px; font-size: 18px;">Providing access to our independent network of attorneys over 650,000 times.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- claims wrapper section end -->
+
+    <!-- why choose us section start -->
+    <section class="choose-us bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-30">
+            <div class="chooseUs-section grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
+                <div class="left-section">
+                    <h1 class="font-bold" style="font-size: 52px;">Why choose us</h1>
+                    <div>
+                        <h2 class="my-5 font-semibold" style="font-size: 30px;">We do right by you</h2>
+                        <p style="font-size: 20px;">We will refund our fee within the first 60 days if you're unhappy with our services.</p>
+                    </div>
+                    <div>
+                        <h2 class="my-5 font-semibold" style="font-size: 30px;">We've got you covered in all 50 states</h2>
+                        <p style="font-size: 20px;">Have peace of mind knowing our docs have been legally recognized in every state—and you'll never need to leave home to work with a lawyer.</p>
+                    </div>
+                    <div>
+                        <h2 class="my-5 font-semibold" style="font-size: 30px;">Flat-rate fees</h2>
+                        <p style="font-size: 20px;">No hourly charges. No surprises. Really.</p>
+                    </div>
+                    <div class="border-b-8 border-gray-600 mt-5"></div>
+                </div>
+                <div>
+                    <img src="./img/kelly-why-us.jpg" alt="Image" class="w-full h-auto rounded-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- why choose us section end -->
+
+    <!-- legal help start here -->
+    <section class="legal-help bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-40">
+            <h1 class="text-center font-bold sm:text-base" style="line-height: 56px; font-size: 50px;">Legal help for every part of your life</h1>
+
+            <div class="chooseUs-section grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
+
+                <div class="left-side">
+                    <img src="./img/home-official-business.jpg" alt="Image" class="w-full sm:w-5/6 h-auto rounded-lg">
+                </div>
+
+                <div class="right-side">
+                    <h1 class="font-bold" style="font-size: 40px;">For Your Business</h1>
+                    <p class="" style="font-size: 25px; line-height: 40px;">Whether you need to form a company, apply for licenses and permits, or get a tax ID, we'll set your business up for success.</p>
+
+                    <div class="mt-8 space-y-4">
+                        <a href="#" class="bg-orange-500 hover:bg-orange-600 hover:text-black text-white font-bold py-4 px-6 rounded-full text-center">Start My Business</a>
+                    </div>
+
+                    <div class="mt-10 space-y-2 flex flex-col sm:flex-row grid-cols-1 sm:space-x-4">
+                        <a href="#" class="bg-white hover:bg-gray-200 hover:text-black text-black border-2 border-gray-500 font-bold py-4 px-6 rounded-full text-center">LLC model</a>
+                        <a href="#" class="bg-white hover:bg-gray-200 hover:text-black text-black border-2 border-gray-500 font-bold py-4 px-6 rounded-full text-center">Corporation</a>
+                        <a href="#" class="bg-white hover:bg-gray-200 hover:text-black text-black border-2 border-gray-500 font-bold py-4 px-6 rounded-full text-center">DBA</a>
+                        <a href="#" class="bg-white hover:bg-gray-200 hover:text-black text-black border-2 border-gray-500 font-bold py-4 px-6 rounded-full text-center">Get Legal Help</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="chooseUs-section grid grid-cols-1 gap-4 sm:grid-cols-2 mt-36">
+
+                <div class="left-side">
+                    <h1 class="font-bold" style="font-size: 40px;">For you and your family</h1>
+                    <p class="" style="font-size: 25px; line-height: 40px;">From wills to powers of attorney, the right estate planning documents can safeguard you and your loved ones—both now, and later.</p>
+
+                    <div class="mt-8 space-y-4">
+                        <a href="#" class="bg-orange-500 hover:bg-orange-600 hover:text-black text-white font-bold py-4 px-6 rounded-full text-center">Start My Estate Plan</a>
+                    </div>
+
+                    <div class="mt-10 space-y-2 flex flex-col sm:flex-row grid-cols-1 sm:space-x-4">
+                        <a href="#" class="bg-white hover:bg-gray-200 hover:text-black text-black border-2 border-gray-500 font-bold py-2 px-6 rounded-full text-center">Last Will</a>
+                        <a href="#" class="bg-white hover:bg-gray-200 hover:text-black text-black border-2 border-gray-500 font-bold py-2 px-6 rounded-full text-center">Living trust</a>
+                        <a href="#" class="bg-white hover:bg-gray-200 hover:text-black text-black border-2 border-gray-500 font-bold py-2 px-6 rounded-full text-center">Power of attorney</a>
+                        <a href="#" class="bg-white hover:bg-gray-200 hover:text-black text-black border-2 border-gray-500 font-bold py-2 px-6 rounded-full text-center">Get Legal Help</a>
+                    </div>
+                </div>
+
+                <div class="right-side">
+                    <img src="./img/home-official-family.jpg" alt="Image" class="w-full sm:w-5/6 h-auto rounded-lg">
+                </div>
+            </div>
+
+            <div class="chooseUs-section grid grid-cols-1 sm:grid-cols-2 mt-36">
+
+                <div class="left-side">
+                    <img src="./img/home-official-ip.jpg" alt="Image" class="w-full sm:w-5/6 h-auto rounded-lg">
+                </div>
+
+                <div class="right-side">
+                    <h1 class="font-bold" style="font-size: 40px;">For your intellectual property</h1>
+                    <p class="" style="font-size: 25px; line-height: 40px;">Need to trademark your logo, copyright a creative work, or patent an invention? Protect yourself against copycats.</p>
+
+                    <div class="mt-8 space-y-4">
+                        <a href="#" class="bg-orange-500 hover:bg-orange-600 hover:text-black text-white font-bold py-4 px-6 rounded-full text-center">View All Options</a>
+                    </div>
+
+                    <div class="mt-10 space-y-2 flex flex-col sm:flex-row grid-cols-1 sm:space-x-4">
+                        <a href="#" class="bg-white hover:bg-gray-200 hover:text-black text-black border-2 border-gray-500 font-bold py-4 px-6 rounded-full text-center">Trademarks</a>
+                        <a href="#" class="bg-white hover:bg-gray-200 hover:text-black text-black border-2 border-gray-500 font-bold py-4 px-6 rounded-full text-center">Copyrights</a>
+                        <a href="#" class="bg-white hover:bg-gray-200 hover:text-black text-black border-2 border-gray-500 font-bold py-4 px-6 rounded-full text-center">Patents</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- legal help end here -->
+
+    <!-- meet our customers -->
+    <section class="customers bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-40">
+            <h1 class="text-center font-bold sm:text-base" style="line-height: 56px; font-size: 50px;">Meet Our Customers</h1>
+            <div class="chooseUs-section grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="./img/llc-customer-bravium.jpg" alt="Image" class="w-full h-auto rounded-lg mb-4">
+                    <!-- Card 1 content here -->
+                    <h2 class="font-bold text-xl mb-4">Bravium</h2>
+                    <p>"Without LegalZoom, I probably would have not felt comfortable, from a time and money and effort standpoint, establishing as many brands as I did. And that would have been a bummer because those are the brands that are really keeping the lights on, and helping our business grow."</p>
+                    <p class="text-gray-400 mt-6">Derek Rohlffs, trademark customer</p>
+                </div>
+        
+                <!-- Card 2 -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="./img/llc-customer-mccalls-meat-and-fish-co.jpg" alt="Image" class="w-full h-auto rounded-lg mb-4">
+                    <h2 class="font-bold text-xl mb-4">McCall's Meat and Fish Co.</h2>
+                    <p>"We've used [LegalZoom] for quite a few things over the years, and overall it's gone very smoothly. They've been easy to work with and very affordable."</p>
+                    <p class="text-gray-400 mt-6">Karen Yoo, LLC customer</p>
+                </div>
+        
+                <!-- Card 3 -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="./img/llc-customer-nell-c.jpg" alt="Image" class="w-full h-auto rounded-lg mb-4">
+                    <h2 class="font-bold text-xl mb-4">Nell C.</h2>
+                    <p>"I needed to update my will. I'd heard of LegalZoom. And when I had to update some documents, I looked online at some other companies, but felt comfortable using LegalZoom. The website was very helpful. And having access to a lawyer to make sure that everything was correct made it really doable."</p>
+                    <p class="text-gray-400 mt-6">Nell C., last will customer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end of meet our customers -->
+
+    <!-- footer code start here -->
+    <footer class="bg-gray-900 text-gray-300 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center flex-col sm:flex-row">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+            <img src="./img/Capture-removebg-preview.png" alt="Logo" class="w-8 h-8" />
+            <span class="ml-3 text-xl text-white">LegalZoom</span>
+          </a>
+          <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-700 sm:py-2 sm:mt-0 mt-4">© 2023 LegalZoom —
+            <a href="#" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">Legal</a>
+          </p>
+          <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <a href="https://www.facebook.com/YourPage" class="text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <!-- Facebook SVG icon -->
+                <i class="fab fa-facebook-square text-3xl mx-2"></i>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/YourChannel" class="ml-3 text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <!-- YouTube SVG icon -->
+                <i class="fab fa-youtube text-3xl mx-2"></i>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/YourProfile" class="ml-3 text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <!-- Instagram SVG icon -->
+                <i class="fab fa-instagram text-3xl mx-2"></i>
+              </svg>
+            </a>
+            <a href="https://www.twitter.com/YourHandle" class="ml-3 text-gray-500">
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                <!-- Twitter SVG icon -->
+                <i class="fab fa-twitter text-3xl mx-2"></i>
+              </svg>
+            </a>
+          </span>
+          
+        </div>
+    </footer>
+      
+
+    <!-- footer code end here -->
+
+    <script src="./src/coustom.js"></script>
+</body>
+</html>
